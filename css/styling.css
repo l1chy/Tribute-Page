@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #8a8267;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c0b89f;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b3625;
+  }
+  ::selection {
+      color:#000000;
+      background-color:#3b3625;
+  }
+
+
+body {
+    background-color: #101820FF;
+}
+
+#background {
+    display: flex;
+    width:100%;
+    height: 100vh;
+    object-fit:cover;
+    object-position: 0 70%;    
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    animation: fadeIn 2s;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    text-decoration:none;
+    word-spacing: 5px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: 1000;
+    white-space: nowrap;
+    color:rgb(235, 235, 235);
+    text-shadow: 0 0 10px black;
+    transition: all .5s ease;
+    animation: fadeIn 2s;
+}
+.intro span {
+    color: #101820FF;
+    transition: all .5s ease;
+    text-shadow: 0px 3px 0px #b2a98f,
+    0px 10px 10px rgba(0,0,0,0.15),
+    0px 20px 2px rgba(0,0,0,0.1),
+    0px 30px 30px rgba(0,0,0,0.1);
+    font-size: 1.4em;
+}
+.intro span:hover {
+    text-shadow: 0 0 0;
+}
+
+
+.who {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-top: 50px;
+}
+
+#container {
+    display: flex;
+    height:inherit;
+    width: inherit;
+    padding: 0 75px 25px 75px;   
+    margin: 75px; 
+    flex-direction: column;
+    background-color: rgb(13, 19, 26);
+    border-radius: 24px;
+    transition: box-shadow .5s ease-in-out;
+}
+#container:hover .alpacino {
+    background-size: 320px;
+    filter: sepia(35%);
+    object-fit: cover;
+    box-shadow: -10px 5px 0 #a09472;
+}
+#container:hover {
+    box-shadow: 0 0 15px #3b341d;
+}
+.alpacino {
+    height: 300px;
+    width: 300px;
+    filter: blur(2px) sepia(50%);
+    border-radius: 300px;
+    background-image: url('https://i.imgur.com/epVa4V5.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all .7s;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    flex-shrink: 0;
+}
+
+.details{
+    font-family: 'Signika Negative', sans-serif;
+    color:#b2a98f;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.name {
+    margin-bottom: 25px;
+    font-style: bold;
+}
+
+p {
+    margin-bottom: 20px;
+    width: 800px;
+}
+.info {
+    font-size: 1.4em;
+    font-family: 'PT Serif', serif;
+}
+.begin {
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+#scarface{
+    text-decoration: underline;
+    color: #9b9172;
+}
+#conclusion {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #585858;
+}
+
+hr {
+    border: 1px dotted #9b9172;
+    border-radius: 1px;
+    margin-bottom: 30px;
+}
+
+
+ blockquote {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #585858;
+}
+
+ cite {
+    color: #9b9172;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+}
+ 
+ cite:before {
+    content: "\2014 \2009";
+}
+
+@media screen and (max-width: 900px) {
+
+    .who, .details, .name, .begin, .info {
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }
+
+    #container {
+        width: 100%;
+        margin:5px;
+        padding:10px;
+    }
+
+    .intro {
+        top: 50%;
+        left: 50%;
+        font-size: 2.5em;
+        white-space: pre-wrap;
+        text-align: center;
+    }
+    
+    #background {
+        object-fit: cover;
+        object-position: 25% 40%
+    }
+}
